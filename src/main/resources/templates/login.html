@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 30px;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        form {
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="reset"],
+        input[type="submit"] {
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        input[type="reset"]:hover,
+        input[type="submit"]:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        input[type="submit"]:active {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body class="subpage">
+
+<!-- Header -->
+<section>
+    <div class="box">
+        <div class="content">
+            <h2 class="align-center">Let's start!</h2>
+            <hr>
+            <form action="#" method="post">
+                <div class="field-half">
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="email" placeholder="Email" required/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Address">Address</label>
+                    <input name="Address" id="Address" type="text" placeholder="Address">
+                </div>
+                <ul class="actions align-center">
+                    <li><input value="Sign-Up" class="button special" type="submit"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

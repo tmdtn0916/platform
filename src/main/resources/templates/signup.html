@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Sign-Up</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            width: 33%; /* Set equal width for all cells */
+        }
+
+        td label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        td p {
+            margin: 0;
+        }
+
+        .field {
+            margin-bottom: 1em;
+        }
+
+        .field-half {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .field-half .field {
+            width: 48%; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body class="subpage">
+
+<!-- Header -->
+<section>
+    <div class="box">
+        <div class="content">
+            <h2 class="align-center">Ready to Play?</h2>
+            <hr>
+            <form action="#" method="post">
+                <div class="field-half">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input name="name" id="name" type="text" placeholder="Name">
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="field-half">
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input name="password" id="password" type="password" placeholder="Password">
+                    </div>
+                    <div class="field">
+                        <label for="Address">Address</label>
+                        <input name="Address" id="Address" type="text" placeholder="Address">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="category">Choose a Category</label>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="radio" name="category" id="category1" value="Gameflex">
+                                <label for="category1">Gameflex</label>
+                                <p>Standard Option</p>
+                                <p>$5/month</p>
+                                <p>Single only</p>
+                            </td>
+                            <td>
+                                <input type="radio" name="category" id="category2" value="GameflexPro">
+                                <label for="category2">Gameflex Pro</label>
+                                <p>Premium Option</p>
+                                <p>$10/month</p>
+                                <p>Can play Multiplay & Special Benefits</p>
+                            </td>
+                            <td>
+                                <input type="radio" name="category" id="category3" value="GameflexFamily">
+                                <label for="category3">Gameflex Family</label>
+                                <p>Family Option</p>
+                                <p>$7.99/month</p>
+                                <p>Can play Multiplay with your Family</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- End of Category Options Table -->
+                <ul class="actions align-center">
+                    <li><input value="Sign-Up" class="button special" type="submit"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

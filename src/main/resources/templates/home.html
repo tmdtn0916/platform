@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Netflix Clone</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #141414;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #111;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .movie {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .movie-item {
+      flex: 0 0 calc(33.3333% - 1rem);
+      max-width: calc(33.3333% - 1rem);
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Game Platform</h1>
+</header>
+
+<main>
+  <h2>Popular Games</h2>
+
+  <div class="movie" th:each="movie : ${movies}">
+    <div class="movie-item">
+      <img th:src="${movie.imageUrl}" alt="Movie Image">
+      <p th:text="${movie.title}"></p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
