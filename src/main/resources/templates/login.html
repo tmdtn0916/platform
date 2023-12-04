@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login</title>
     <meta charset="utf-8">
@@ -81,7 +81,7 @@
         <div class="content">
             <h2 class="align-center">Let's start!</h2>
             <hr>
-            <form action="#" method="post">
+            <form th:action="@{/login}" method="post">
                 <div class="field-half">
                     <div class="field">
                         <label for="email">Email</label>
@@ -89,8 +89,8 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label for="Address">Address</label>
-                    <input name="Address" id="Address" type="text" placeholder="Address">
+                    <label for="password">Address</label>
+                    <input name="password" id="password" type="password" placeholder="Password">
                 </div>
                 <ul class="actions align-center">
                     <li><input value="Sign-Up" class="button special" type="submit"></li>

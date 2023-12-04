@@ -1,62 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Netflix Clone</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #141414;
-      color: #ffffff;
-    }
-
-    header {
-      background-color: #111;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    main {
-      padding: 2rem;
-    }
-
-    .movie {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .movie-item {
-      flex: 0 0 calc(33.3333% - 1rem);
-      max-width: calc(33.3333% - 1rem);
-      box-sizing: border-box;
-      margin-bottom: 1rem;
-    }
-
-    .movie-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-  </style>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homepage</title>
+	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
+
 <body>
-<header>
-  <h1>Game Platform</h1>
-</header>
 
-<main>
-  <h2>Popular Games</h2>
+<!-- Header -->
+<!-- Add your header content here if needed -->
 
-  <div class="movie" th:each="movie : ${movies}">
-    <div class="movie-item">
-      <img th:src="${movie.imageUrl}" alt="Movie Image">
-      <p th:text="${movie.title}"></p>
-    </div>
-  </div>
-</main>
+<!-- Banner -->
+<section id="banner" data-video="images/homepage">
+	<div class="inner">
+		<h1>Gameflex</h1>
+		<br><br><br><br><br><br><br><br><br><br><br>
+		<a href="/login" class="button special scrolly">Login</a>
+		<a href="/signup" class="button special scrolly">Sign-Up</a>
+		<br><br><br>
+		<a href="http://mnuwb.mokpo.ac.kr:3366/manage/main.do/">Mokpo National University</a>
+	</div>
+</section>
+
+<!-- Add other sections or content as needed -->
+
 </body>
+
 </html>

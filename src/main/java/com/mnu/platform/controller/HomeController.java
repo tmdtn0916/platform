@@ -10,24 +10,28 @@ public class HomeController {
     public String home(Model model) {
         return "home";
     }
-
-    @GetMapping(path = "/net")
-    public String netfilx(Model model) {
-        return "netfilx";
+    @GetMapping(path="/game")
+    public String game(){
+        return "game_select";
     }
 
-    @GetMapping(path="/banner")
-    public String banner(Model model) {
-        return "banner";
+    @GetMapping(path="/info")
+    public String info(){
+        return "user_info";
     }
 
-    @GetMapping(path="/login")
-    public String login() {
-        return "login";
+    @GetMapping(path="/elements")
+    public String elements(){
+        return "elements";
     }
 
-    @GetMapping(path = "/signup")
-    public String singup(){
-        return "signup";
+    @GetMapping(path="/rg1")
+    public String rg1(){
+        return "rg_1";
+    }
+
+    @GetMapping(path="/rg2")
+    public String rg2(){
+        return "rg_2";
     }
 }

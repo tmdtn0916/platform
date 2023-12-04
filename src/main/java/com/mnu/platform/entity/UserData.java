@@ -27,7 +27,7 @@ public class UserData {
 
     @ManyToMany
     @JoinTable(
-            name = "library", // 매핑 테이블 이름
+            name = "library",
             joinColumns = @JoinColumn(name = "user_no"),
             inverseJoinColumns = @JoinColumn(name = "game_no")
     )

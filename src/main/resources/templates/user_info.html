@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        section {
+            width: 70%; /* Adjustable width */
+        }
+    </style>
+    <title>User Info</title>
+</head>
+<body class="subpage">
+
+    <header id="header"><div class="logo"><a href="home.html">Gameflex<span></span></a></div>
+</header>
+<!-- Form -->
+<section>
+    <br><br><br><br>
+    <h3>User Info</h3>
+    <form method="post" action="#">
+        <div class="row uniform">
+            <div class="6u 12u$(xsmall)">
+                <label for="demo-name">Name</label>
+                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name">
+            </div>
+            <div class="12u$">
+                <label>Gender</label>
+                <div class="select-wrapper">
+                    <select name="demo-gender" id="demo-gender">
+                        <option value="">- Select Gender -</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="12u$">
+                <label>Age Group</label>
+                <div class="select-wrapper">
+                    <select name="demo-age" id="demo-age">
+                        <option value="">- Select Age Group -</option>
+                        <option value="10s">10s</option>
+                        <option value="20s">20s</option>
+                        <option value="30s">30s</option>
+                        <option value="40s">40s</option>
+                        <option value="50s">50s</option>
+                    </select>
+                </div>
+            </div>
+            <div class="12u$">
+                <label>Country</label>
+                <div class="select-wrapper">
+                    <select name="demo-country" id="demo-country">
+                        <option value="">- Select Country -</option>
+                        <option value="KR">South Korea</option>
+                        <option value="TaW">Taiwan</option>
+                        <option value="MO">Macao</option>
+                        <option value="SG">Singapore</option>
+                        <option value="IL">Israel</option>
+                        <option value="JP">Japan</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="GR">Greece</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="NO">Norway</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DE">Germany</option>
+                        <option value="BE">Belgium</option>
+                        <option value="SE">Sweden</option>
+                        <option value="ES">Spain</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="IT">Italy</option>
+                        <option value="FR">France</option>
+                        <option value="FI">Finland</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="12u$">
+                <ul class="actions">
+                    <li><input type="submit" value="Submit"></li>
+                    <li><input type="reset" value="Reset" class="alt"></li>
+                    <br><br><br><br><br><br><br><br><br><br><br>
+                </ul>
+            </div>
+        </div>
+    </form>
+</section>
+<footer id="footer">
+    <div class="copyright">
+        <a href="http://mnuwb.mokpo.ac.kr:3366/manage/main.do/">Mokpo National University</a>
+					
+    </div>
+</footer>
+</body>
+</html>
