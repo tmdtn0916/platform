@@ -35,6 +35,7 @@ public class SecurityConfig{
 				.csrf().disable()
 				.authorizeHttpRequests(authorize -> authorize
 						.requestMatchers("/login","/signup").anonymous()
+						.requestMatchers("/board/**").hasRole("COMPANY")
 						.dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
 						.requestMatchers(AUTH_WHITELIST).permitAll()
 						.anyRequest().authenticated())

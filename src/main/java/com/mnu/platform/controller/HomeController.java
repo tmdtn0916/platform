@@ -34,4 +34,39 @@ public class HomeController {
     public String rg2(){
         return "rg_2";
     }
+
+    @GetMapping(path="/rg3")
+    public String rg3(){
+        return "rg_3";
+    }
+
+    @GetMapping(path="/rg4")
+    public String rg4() {
+        return "rg_4";
+    }
+
+    @GetMapping(path="/pg1")
+    public String pg1(){
+        return "pg_1";
+    }
+
+    @GetMapping(path="/pg2")
+    public String pg2(){
+        return "pg_2";
+    }
+
+    @GetMapping(path="/pg3")
+    public String pg3(){
+        return "pg_3";
+    }
+
+    @GetMapping(path="/pg4")
+    public String pg4(){
+        return "pg_4";
+    }
+
+    @GetMapping(path="/board")
+    public String board(){
+        return "article";
+    }
 }

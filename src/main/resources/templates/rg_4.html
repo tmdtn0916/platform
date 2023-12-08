@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft</title>
+    <title>Fallout4</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body class="subpage">
 
 <header id="header">
     <div class="logo">
-        <a href="home">Gameflex<span></span></a>
+        <a href="banner.html">Gameflex<span></span></a>
     </div>
 </header>
-
 
 <section id="one" class="wrapper style2">
     <div class="inner">
         <div class="box">
             <div class="content">
-                <h3 id="elements">Minecraft</h3>
+                <h3 id="elements">Fallout4</h3>
                 <div class="row 200%">
                     <div class="6u 12u$(medium)">
                         <span class="image fit">
-                            <img src="images/r_1.png" alt="" width="3472" height="1035">
+                            <img src="images/r_4.png" alt="" width="3472" height="1035">
                         </span>
                         <hr>
                         <header>
                             <h2>게임 설명</h2>
-                            <p>《마인크래프트》에서 플레이어는 무한히 펼쳐진 3차원 세계를 무대로 채집, 물품 제작, 건축, 토공 등의 활동을 한다. 게임 진행 방식으로서 여러 모드를 선택할 수 있어, 세계 속 자원으로 생존을 도모하는 '서바이벌 모드', 자유롭게 세계를 가꾸는 '크리에이티브 모드' 등을 지원한다. 사용자가 제작한 전용 모드를 통해서 새로운 게임플레이 요소들을 삽입할 수 있다.
+                            <p>《폴아웃 4》는 베데스다 게임 스튜디오 개발 및 베데스다 소프트웍스 배급의 액션 롤플레잉 비디오 게임이다. 폴아웃 시리즈의 다섯 번째 주요 작품으로서, 2015년 11월 10일 마이크로소프트 윈도우, 플레이스테이션 4, 엑스박스 원으로 발표되었다. 게임의 무대는 오픈 월드 포스트 아포칼립스 환경인데, "커먼웰스"로 통칭되는 보스턴 시와 매사추세츠 일대를 포함하고 있다. 핵심 이야기는, 《폴아웃 3》에서는 10년, 미국을 가로지르는 파멸적 핵괴멸 "대전쟁"에서는 210년의 세월이 흐른 2287년을 시점으로 한다.
+
+                                플레이어는 "유일한 생존자"로 지칭되는 캐릭터를 조종한다. 지하 낙진 방공호 볼트 111에서 장기간의 극저온 수면에서 깨어난 유일한 생존자는, 배우자 살해 및 아들 납치를 당한 상태로 커먼웰스로 모험을 시작하여 잃어버린 아들을 조사한다. 플레이어는 그러면서, 게임의 다양한 퇴락하는 세계의 탐험, 각종 임무의 완수, 파벌에 대한 지원, 캐릭터 능력의 향상을 위한 능력치 습득을 수행한다. 시리즈 최초로 정착지 개발 및 관리 기능과 주변 환경에서 발견한 재료들이 마약, 폭발물 제작 및 무기, 방어구 향상 및 정착지 건설, 가구 배치, 개선에 사용되는 광범한 제작 시스템이 생겼다. 《폴아웃 4》는 주인공의 모든 음성을 제공하는 기능도 시리즈 최초 도입되었다.
                             </p>
                         </header>
                         <h3>게임정보</h3>
                         <div class="row">
                             <div class="6u 12u$(small)">
                                 <ul class="alt">
-                                    <li>개발사: 모장스튜디오</li>
-                                    <li>출시일: 2011년 11월 18일</li>
-                                    <li>장르: 샌드박스</li>
+                                    <li>개발사: 베데스다 게임 스튜디오</li>
+                                    <li>출시일: 2015년 11월 10일</li>
+                                    <li>장르: 액션 RPG</li>
                                 </ul>
                             </div>
                             <div class="6u$ 12u$(small)">
@@ -94,14 +95,63 @@
         <a href="http://mnuwb.mokpo.ac.kr:3366/manage/main.do/">Mokpo National University</a>
     </div>
 </footer>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="assets/js/reply.js"/>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+    // 댓글 데이터
+    var comments = [];
+
+    // 댓글 추가 함수
+    function addComment() {
+        var title = document.getElementById("demo-name").value;
+        var category = document.getElementById("demo-category").value;
+        var message = document.getElementById("demo-message").value;
+
+        if (title && category !== null && message) {
+            var newComment = {
+                title: title,
+                category: category,
+                message: message
+            };
+
+            comments.push(newComment);
+
+            updateComments();
+
+            // 폼 비우기
+            document.getElementById("demo-name").value = "";
+            document.getElementById("demo-category").value = "";
+            document.getElementById("demo-message").value = "";
+        } else {
+            alert("모든 필드를 작성하세요.");
+        }
+    }
+
+    // 댓글 목록 갱신 함수
+    function updateComments() {
+        var commentsContainer = document.getElementById("comments-container");
+        commentsContainer.innerHTML = "";
+
+        for (var i = 0; i < comments.length; i++) {
+            var comment = comments[i];
+
+            var commentElement = document.createElement("div");
+            commentElement.innerHTML = "<strong>" + comment.title + "</strong> - 추천: " + (comment.category === "1" ? "추천함" : "추천하지 않음") + "<p>" + comment.message + "</p>";
+            commentsContainer.appendChild(commentElement);
+        }
+    }
+
+    // 댓글 폼 제출 이벤트 핸들러
+    document.getElementById("comment-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        addComment();
+    });
+</script>
 
 </body>
 </html>

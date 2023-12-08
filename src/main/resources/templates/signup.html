@@ -65,11 +65,23 @@
                 <div class="field-half">
                     <div class="field">
                         <label for="password">Password</label>
-                        <input name="password" id="password" type="password" th:field="*{passwd}" placeholder="Password">
+                        <input name="password" id="password" type="password" th:field="*{passwd}"
+                               placeholder="Password">
                     </div>
                     <div class="field">
-                        <label for="Address">Address</label>
-                        <input name="Address" id="Address" type="text" placeholder="Address">
+                        <label for="auth">Type</label>
+                        <select name="auth" id="auth" placeholder="auth">
+                            <option value="company" th:value="user">일반 사용자</option>
+                            <option value="company" th:value="company">기업</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="field-half">
+                    <div class="field">
+                        <label for="birth">생년월일</label>
+                        <input name="birth" id="birth" type="date" th:field="*{birth}" placeholder="yyyy-mm-dd"
+                               required>
                     </div>
                 </div>
                 <div class="field">
@@ -79,23 +91,23 @@
                             <td>
                                 <input type="radio" name="category" id="category1" value="Gameflex">
                                 <label for="category1">Gameflex</label>
-                                <p>Standard Option</p>
-                                <p>$5/month</p>
+                                <p>Free Option</p>
+                                <p>For free/month</p>
                                 <p>Single only</p>
                             </td>
                             <td>
                                 <input type="radio" name="category" id="category2" value="GameflexPro">
                                 <label for="category2">Gameflex Pro</label>
-                                <p>Premium Option</p>
-                                <p>$10/month</p>
-                                <p>Can play Multiplay & Special Benefits</p>
+                                <p>Standard Option</p>
+                                <p>$5/month</p>
+                                <p>Single only</p>
                             </td>
                             <td>
                                 <input type="radio" name="category" id="category3" value="GameflexFamily">
                                 <label for="category3">Gameflex Family</label>
-                                <p>Family Option</p>
-                                <p>$7.99/month</p>
-                                <p>Can play Multiplay with your Family</p>
+                                <p>Premium Option</p>
+                                <p>$10/month</p>
+                                <p>Can play Multiplay & Special Benefits</p>
                             </td>
                         </tr>
                     </table>

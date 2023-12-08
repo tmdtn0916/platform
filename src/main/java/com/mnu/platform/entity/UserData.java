@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 
@@ -25,11 +26,15 @@ public class UserData {
     @Column(nullable = false, length = 130, name = "password")
     private String passwd;
 
-    @ManyToMany
-    @JoinTable(
-            name = "library",
-            joinColumns = @JoinColumn(name = "user_no"),
-            inverseJoinColumns = @JoinColumn(name = "game_no")
-    )
+    @Column
+    private LocalDate birth;
+
+    @Column
+    private String auth;
+
+    @OneToMany(mappedBy = "userData")
     private Set<Game> games;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Review> gameReviews;
 }
