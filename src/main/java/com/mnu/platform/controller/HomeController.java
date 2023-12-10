@@ -64,9 +64,4 @@ public class HomeController {
     public String pg4(){
         return "pg_4";
     }
-
-    @GetMapping(path="/board")
-    public String board(){
-        return "article";
-    }
 }

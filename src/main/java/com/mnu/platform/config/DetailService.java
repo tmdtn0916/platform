@@ -39,6 +39,8 @@ public class DetailService implements UserDetailsService{
 //				.password(user.getPasswd())
 //				.authorities("ROLE_ADMIN")
 //				.build();
+		System.out.println(authorities);
+
 		return new User(
 				user.getEmail(),
 				user.getPasswd(),

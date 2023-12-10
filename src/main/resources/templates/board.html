@@ -1,5 +1,5 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,16 +32,25 @@
 </header>
 <body class="subpage">
 <div>
-    <form method="post" action="process_form.php" enctype="multipart/form-data">
+    <form method="post" th:action="@{/board}" enctype="multipart/form-data">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title" required>
 
-        <label for="thumbnail">Thumbnail Image (URL or Upload):</label>
-        <input type="text" name="thumbnail" id="thumbnail" placeholder="OR enter URL">
-        <input type="file" name="thumbnailUpload" id="thumbnailUpload">
+        <label for="image">Image (URL or Upload):</label>
+        <input type="text" name="image" id="image" placeholder="OR enter URL">
+        <input type="file" name="imageUpload" id="imageUpload">
 
         <label for="content">Content:</label>
-        <textarea name="content" id="content" rows="8" required></textarea>
+        <textarea name="content" id="content" rows="8"></textarea>
+
+        <label for="categories">Categories:</label>
+        <select name="categories" id="categories">
+<!--            <option th:each="category : ${categories}" th:value="${category.categoryId}"-->
+<!--                    th:text="${category.categoryName}"></option>-->
+            <option th:value = "1">FPS</option>
+            <option th:value = "2">RTS</option>
+            <option th:value = "3">RPG</option>
+        </select>
 
         <input type="submit" value="Submit">
     </form>

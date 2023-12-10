@@ -30,7 +30,7 @@
 <body class="subpage">
 
 <header id="header">
-    <div class="logo"><a href="home.html">Gameflex<span></span></a></div>
+    <div class="logo"><a href="home">Gameflex<span></span></a></div>
 </header>
 
 <nav id="menu">
@@ -48,6 +48,7 @@
             <div class="content">
                 <div class="content">
                     <h2 class="align-center">Enjoy Gameflex</h2>
+                    <a th:if="${#authorization.expression('hasRole(''ROLE_COMPANY'')')}" href="/board" class="button special scrolly">게임 등록</a>
                     <hr>
                     <h2 id="game-rec">고객 맞춤 게임 추천</h2>
 
