@@ -32,9 +32,6 @@ public class UserData {
     @Column
     private String auth;
 
-    @OneToMany(mappedBy = "userData")
-    private Set<Game> games;
-
     @OneToMany(mappedBy = "user")
     private Set<Review> gameReviews;
 }

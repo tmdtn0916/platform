@@ -19,16 +19,8 @@ public class Game {
     @Column(nullable = false, length = 50)
     private String title;
 
-    @Column(nullable = false, length = 130)
-    private String genre;
-
-    @ManyToOne
-    @JoinColumn(name = "producer_no")
-    private Producer producer;
-
-    @ManyToOne
-    @JoinColumn(name = "user_no")
-    private UserData userData;
+    @Column
+    private String recommandAge;
 
     @ManyToMany
     @JoinTable(

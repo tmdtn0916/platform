@@ -1,17 +1,39 @@
 package com.mnu.platform.controller;
 
+import com.mnu.platform.entity.Review;
+import com.mnu.platform.entity.UserData;
+import com.mnu.platform.repository.ReviewRepository;
+import com.mnu.platform.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @Controller
 public class HomeController {
+    @Autowired
+    ReviewRepository reviewRepository;
+
+    @Autowired
+    UserRepository userRepository;
+
     @GetMapping(path = "/home")
     public String home(Model model) {
         return "home";
     }
     @GetMapping(path="/game")
-    public String game(){
+    public String game(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+        UserData user = userRepository.findByEmail(username);
+
+        model.addAttribute("name",user.getName());
+        model.addAttribute("auth",user.getAuth());
         return "game_select";
     }
 
@@ -26,7 +48,8 @@ public class HomeController {
     }
 
     @GetMapping(path="/rg1")
-    public String rg1(){
+    public String rg1(Model model){
+        model.addAttribute("new_review",new Review());
         return "rg_1";
     }
 

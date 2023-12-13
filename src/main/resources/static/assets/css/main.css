@@ -2114,12 +2114,16 @@
 			display: none;
 		}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select {
-		height: 2.75rem;
-	}
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+	    height: 2.75rem;
+    }
+
+    select {
+	    height: 4.75rem;
+    }
+
 
 	textarea {
 		padding: 0.75rem 1rem;

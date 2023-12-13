@@ -53,22 +53,22 @@
                     </div>
                     <div class="6u$ 12u$(medium)">
                         <h3>평가</h3>
-                        <form method="post" action="#" id="comment-form">
+                        <form method="post" th:action="@{/reply}" id="comment-form">
                             <div class="row uniform">
                                 <div class="6u 12u$(xsmall)">
-                                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="제목">
+                                    <input type="text" name="title" id="demo-name" value="" placeholder="제목">
                                 </div>
                                 <div class="12u$">
                                     <div class="select-wrapper">
-                                        <select name="demo-category" id="demo-category">
+                                        <select name="recommend" id="demo-category">
                                             <option value="">- 추천 -</option>
-                                            <option value="1">추천함</option>
-                                            <option value="0">추천하지 않음</option>
+                                            <option value=1>추천함</option>
+                                            <option value=0>추천하지 않음</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="12u$">
-                                    <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6" data-gramm="false" wt-ignore-input="true"></textarea>
+                                    <textarea name="Content" id="demo-message" placeholder="Enter your message" rows="6" data-gramm="false" wt-ignore-input="true"></textarea>
                                 </div>
                                 <div class="12u$">
                                     <ul class="actions">
@@ -95,7 +95,8 @@
     </div>
 </footer>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="assets/js/reply.js"/>
+<script src="assets/js/rg1.js"></script>
+<!--<script src="assets/js/reply.js"/>-->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
